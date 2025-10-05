@@ -8,3 +8,13 @@ COPY *.js /docker-entrypoint-initdb.d
 
 #master-data.js has catagories related data
 
+# Commands to execute after finishing the dockerfile creation
+
+# docker build -t mongodb:v1 .
+
+# docker run -d --name mongodb mongodb:v1
+
+# As we are not exposing the mongodb, we are not using -p command 
+
+# docker exec -t mongodb <container-id>    ---- to loginto the container in execute mode and see the catagories related data
+
