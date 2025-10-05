@@ -10,6 +10,7 @@ docker run -d --name user --network roboshop user:v1
 docker ps 
 
 docker exec -it user:v1 bash
+
 curl localhost:8080/health
 
 this shows app:OK and mongo:true   >>>> which confirms that catalogue is running fine
