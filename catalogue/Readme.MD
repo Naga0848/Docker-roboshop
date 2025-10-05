@@ -43,3 +43,44 @@ If you want, I can help you verify that server.js is set up correctly to start y
 ============================================================
 
 
+# Commands to execute the docker image
+
+docker build -t catalogue:v1 .
+
+docker run -d --name catalogue catalogue:v1
+
+docker ps
+
+docker exec -it catalogue bash
+
+curl http://catalogue:8080/health   >>> to see whther catalogue is properly istalled or not
+
+docker have 2 types of network, bridge and host. host means directly host network. bridge means docker creates seperate network interface and assign the IP address to containers..
+
+docker default bridge network can't communicate between containers, docker always suggest to create custom brige network
+
+
+
+# Commands to create a new network and disconnect and connect to the new network
+
+docker network create roboshop  >>>  command to create a new network
+
+docker network disconnect bridge catalogue
+
+docker network disconnect bridge mongodb
+
+docker network ls >>> shows our networks
+
+
+docker network connect roboshop catalogue
+
+docker network connect roboshop catalogue
+
+docker exec -it catalogue bash
+curl localhost:8080/health
+this shows app:OK and mongo:true   >>>> which confirms that catalogue is running fine
+
+
+
+
+
