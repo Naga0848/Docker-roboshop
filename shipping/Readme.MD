@@ -15,3 +15,18 @@ docker run -d --name shipping --network roboshop shipping:v1
 docker exec -it <container-id> bash
 
 exit
+
+
+# Understanding the CMD instruction step-by-step
+
+# CMD ["java","-jar","shipping.jar"]
+
+What Each Part Means
+
+CMD: This sets the default executable for the container.
+
+"java": Invokes the Java runtime.
+
+"-jar": Tells Java to run a JAR (Java Archive) file.
+
+"shipping.jar": This is the compiled Java application that Maven built during the mvn clean package step.
