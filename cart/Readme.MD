@@ -15,3 +15,7 @@ curl localhost:8080/health
 
 this shows app:OK and mongo:true   >>>> which confirms that cart is running fine
 
+exit
+
+
+

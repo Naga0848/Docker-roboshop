@@ -13,5 +13,7 @@ docker exec -it user:v1 bash
 
 curl localhost:8080/health
 
+exit
+
 this shows app:OK and mongo:true   >>>> which confirms that user is running fine
 

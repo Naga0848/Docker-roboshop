@@ -17,4 +17,7 @@ actually, its master-data.js which is part of catalogue msvc, but we are running
 
  As we are not exposing the mongodb, we are not using -p command 
 
-docker exec -t mongodb <container-id>    >>>  to loginto the container in execute mode and see the catagories related data
+docker exec -t mongodb <container-id> bash  >>>  to loginto the container in execute mode and see the catagories related data
+
+exit
+

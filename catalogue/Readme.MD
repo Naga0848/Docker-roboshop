@@ -57,6 +57,8 @@ docker exec -it catalogue bash
 
 curl http://catalogue:8080/health   >>> to see whther catalogue is properly istalled or not
 
+exit
+
 docker have 2 types of network, bridge and host. host means directly host network. bridge means docker creates seperate network interface and assign the IP address to containers..
 
 docker default bridge network can't communicate between containers, docker always suggest to create custom brige network
