@@ -14,3 +14,4 @@ docker run -d --name mysql --network roboshop mysql:v1
 
 docker ps
 
+docker exec -it <container-id> bash 
