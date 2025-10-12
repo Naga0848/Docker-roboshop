@@ -7,3 +7,9 @@
 
 # As we are creating the Rabbitmq directly via docker compose and we are mentioning the env variables as well in the docker compose file
 
+ # My Docker Credentials
+ username - nagashankar1992332
+
+ login to the docker and run docker compose command
+
+ 

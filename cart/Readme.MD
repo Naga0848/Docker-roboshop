@@ -19,3 +19,5 @@ exit
 
 
 
+# docker build -t nagashankar1992332/cart:v1 .
+
