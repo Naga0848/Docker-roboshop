@@ -23,3 +23,6 @@ usgi: This is likely a command-line tool or executable included in the image. It
 
 docker build -t nagashankar1992332/payment:v1 .
 
+===============================================================
+
+Env variables for this payment service is writeen in the docker-compose.yaml rather that writing in the dockerfile
