@@ -4,3 +4,6 @@
 
 # Command >>>> docker run -d --name redis --network roboshop redis:7
     indicates that redis is running on roboshop network with the name redis
+
+# As we are creating the Rabbitmq directly via docker compose and we are mentioning the env variables as well in the docker compose file
+
