@@ -10,12 +10,12 @@ volumes:
   rabbitmq: # docker volume create rabbitmq
 services:
   mongodb:
-    image: nagashankar1992332/mongodb:v1
+    image: joindevops/mongodb:v1
     container_name: mongodb
     volumes:
     - mongodb:/data/db
   catalogue:
-    image: nagashankar1992332/catalogue:v1
+    image: joindevops/catalogue:v1
     container_name: catalogue
     depends_on:
     - mongodb
@@ -25,24 +25,24 @@ services:
     volumes:
     - redis:/data
   user:
-    image: nagashankar1992332/user:v1
+    image: joindevops/user:v1
     container_name: user
     depends_on:
     - redis
     - mongodb
   cart:
-    image: nagashankar1992332/cart:v1
+    image: joindevops/cart:v1
     container_name: cart
     depends_on:
     - catalogue
     - redis
   mysql:
-    image: nagashankar1992332/mysql:v1
+    image: joindevops/mysql:v1
     container_name: mysql
     volumes:
     - mysql:/var/lib/mysql
   shipping:
-    image: nagashankar1992332/shipping:v1
+    image: joindevops/shipping:v1
     container_name: shipping
     depends_on:
     - mysql
@@ -56,7 +56,7 @@ services:
     volumes:
     - rabbitmq:/var/lib/rabbitmq
   payment:
-    image: nagashankar1992332/payment:v1
+    image: joindevops/payment:v1
     container_name: payment
     environment:
       CART_HOST: cart
@@ -71,7 +71,7 @@ services:
     - cart
     - user
   frontend:
-    image: nagashankar1992332/frontend:v1
+    image: joindevops/frontend:v1
     container_name: frontend
     ports:
     - "80:80"
