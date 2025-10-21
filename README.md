@@ -1,5 +1,7 @@
 # Docker-roboshop
 
+# All these images are optimized and these images have less size
+
 # As we are not filling any data into the Redis we can directly run the redis container on our Docker host
 
 # Command >>>> docker run -d --name redis --network roboshop redis:7
