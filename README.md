@@ -135,3 +135,9 @@
 
     this shows app:OK and mongo:true   >>>> which confirms that catalogue is running fine
 
+### REDIS
+
+    Here we are directly using the existing Docker image for Redis
+    
+    docker run -d --name redis --network roboshop redis:7 
+        indicates that redis is running on roboshop network with the name redis
