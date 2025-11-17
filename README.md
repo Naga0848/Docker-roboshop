@@ -104,6 +104,8 @@
 
     curl http://catalogue:8080/health   >>> to see whther catalogue is properly istalled or not
 
+![alt text](images/catalogue-connection-test.png)
+
     exit
 
     docker tag catalogue:v1:latest nagashankar1992332/catalogue:v1:latest   >>> push the image to DockerHub
