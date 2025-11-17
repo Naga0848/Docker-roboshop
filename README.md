@@ -127,7 +127,7 @@
 
     docker network connect roboshop catalogue
 
-    docker network connect roboshop catalogue
+    docker network connect roboshop mongodb
 
     docker exec -it catalogue bash
 
