@@ -108,7 +108,7 @@
 
     docker have 2 types of network, bridge and host. host means directly host network. bridge means docker creates seperate network interface and assign the IP address to containers..
 
-    docker default bridge network can't communicate between containers, docker always suggest to create custom brige network
+    docker default network "bridge" can't communicate between containers. so, docker always suggest to create custom brige network
 
     Catalogue and MongoDB cannot connect to eachother via default network, so we are creating the roboshop network
 
