@@ -110,6 +110,8 @@
 
     docker default bridge network can't communicate between containers, docker always suggest to create custom brige network
 
+    Catalogue and MongoDB cannot connect to eachother via default network, so we are creating the roboshop network
+
  ![alt text](images/network.png)   >> This diagram helps in understanding the network in Docker
 
 ####   Commands to create a new network and disconnect and connect to the new network
