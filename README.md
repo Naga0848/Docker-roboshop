@@ -43,6 +43,8 @@
 
         docker exec -t mongodb bash >>> to loginto the container in execute mode and see the catagories related data
 
+        docker tag mongodb:v1:latest nagashankar1992332/mongodb:v1:latest   >>> push the image to DockerHub
+
         exit
 
 ### CATALOGUE
@@ -101,6 +103,8 @@
     curl http://catalogue:8080/health   >>> to see whther catalogue is properly istalled or not
 
     exit
+
+    docker tag catalogue:v1:latest nagashankar1992332/catalogue:v1:latest   >>> push the image to DockerHub
 
     docker have 2 types of network, bridge and host. host means directly host network. bridge means docker creates seperate network interface and assign the IP address to containers..
 
