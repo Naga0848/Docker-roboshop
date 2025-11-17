@@ -57,7 +57,7 @@
     COPY command makes sure that we are copying all the code into the /opt/server folder 
     And finally, line no-29, manam execute cheyalsina code server.js
 
-    In our Dockerfile we are suing the combination of CMD and ENTRYPOINT and installing the necessary packages for bash and the main application
+    In our Dockerfile we are suing the combination of CMD and ENTRYPOINT and installing the necessary packages for bash and the main application because by default apline images will not have bash and curl installed on them
 
     Download the https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip  into our laptop and extract it. And copy the make package.json and server.json so that they are with our dockerfile
 
@@ -102,7 +102,7 @@
 
     docker exec -it catalogue sh
 
-    curl http://catalogue:8080/health   >>> to see whther catalogue is properly istalled or not
+    curl http://catalogue:8080/health   >>> to see whether catalogue is properly installed or not
 
 ![alt text](images/catalogue-connection-test.png)
 
