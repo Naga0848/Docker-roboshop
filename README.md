@@ -98,7 +98,7 @@
 
     docker ps
 
-    docker exec -it catalogue bash
+    docker exec -it catalogue sh
 
     curl http://catalogue:8080/health   >>> to see whther catalogue is properly istalled or not
 
@@ -108,7 +108,7 @@
 
     docker have 2 types of network, bridge and host. host means directly host network. bridge means docker creates seperate network interface and assign the IP address to containers..
 
-    docker default network "bridge" can't communicate between containers. so, docker always suggest to create custom brige network
+    when ever we create a container it uses the default network. ANd docker default network "bridge" can't communicate between containers. so, docker always suggest to create custom brige network
 
     Catalogue and MongoDB cannot connect to eachother via default network, so we are creating the roboshop network
 
