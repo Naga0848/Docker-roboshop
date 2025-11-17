@@ -225,6 +225,7 @@
      docker exec -it shipping bash
 
      exit
+![alt text](images/shipping-connection-test.png)
 
 #### Understanding the CMD instruction step-by-step
 
