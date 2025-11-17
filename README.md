@@ -66,8 +66,6 @@
     It tells Docker: “When someone runs a container from this image, execute node server.js.”
 
     This starts your Node.js application by running the server.js file.
-
-
     =============
 
     the word node refers to the Node.js runtime—a JavaScript engine that lets you run JavaScript code outside of a browser, typically on servers.
@@ -83,7 +81,6 @@
     inside the container, which kicks off your app
 
     ============
-
     Your Dockerfile starts with:
 
     FROM node:20
@@ -108,7 +105,6 @@
     docker have 2 types of network, bridge and host. host means directly host network. bridge means docker creates seperate network interface and assign the IP address to containers..
 
     docker default bridge network can't communicate between containers, docker always suggest to create custom brige network
-
 
 ####   Commands to create a new network and disconnect and connect to the new network
 
