@@ -45,9 +45,9 @@
 
         exit
 
-#### CATALOGUE
+### CATALOGUE
 
-##  Understanding the docker image step by step
+####  Understanding the docker image step by step
 
     ikkada line no-27 lo unna mongodb:27017 is the host. manam separate ga route53 ni em use cheyatledu. name of the container is the name of the host i.e., mongdb
     we already know that mongodb is available on 27017 port no
