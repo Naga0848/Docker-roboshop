@@ -222,7 +222,7 @@
 
      docker run -d --name shipping --network roboshop shipping:v1
 
-     docker exec -it bash
+     docker exec -it shipping bash
 
      exit
 
