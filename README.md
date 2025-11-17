@@ -19,28 +19,45 @@
 
 # /var/lib/docker ----> Docker Home directory and all the images that we built are stored here and we need to increase the size of this location when we are creating docker using terrform
 
-# DOCKER BEST PRACTISES
+## Understanding Roboshop Application Service specific Dockerfiles 
 
- # Dockerfile and Image Optimization:
-    Use Multi-stage Builds: Separate build-time dependencies from runtime dependencies to create smaller, more secure final images.
-    Choose Small Base Images: Start with lightweight base images (e.g., Alpine) to reduce image size and attack surface.
-    Minimize Layers: Combine related commands in a single RUN instruction using && to reduce the number of image layers and improve build cache utilization.
-    Leverage Build Cache: Order Dockerfile instructions to maximize caching, placing frequently changing instructions later in the file.
-    Use .dockerignore: Exclude unnecessary files from the build context to speed up builds and reduce image size.
-    Prefer COPY over ADD: COPY is generally safer and more predictable as it only copies local files, while ADD can also fetch remote URLs and extract archives.
-    Pin Base Image Versions: Specify exact image tags (e.g., node:18-alpine) to ensure reproducible builds and prevent unexpected changes.
-    Don't Install Unnecessary Packages: Only include what's essential for your application to run.
-# Container Security:
-    Run as Non-Root User: Create a dedicated user inside the container and run the application as that user, reducing potential privilege escalation.
-    Limit Capabilities: Restrict container capabilities to only those strictly necessary for the application.
-    Enable Rootless Mode: Where possible, run Docker daemon and containers in rootless mode for enhanced security.
-    Use Trusted Images: Source images from official repositories or trusted vendors and scan them for vulnerabilities.
-    Avoid Exposing Sensitive Information: Do not store secrets or credentials directly in Dockerfiles or images. Utilize Docker Secrets or environment variables with caution.
-    Secure the Docker Daemon Socket: Avoid exposing /var/run/docker.sock to containers or the network.
-# Deployment and Management:
-    Create Ephemeral Containers: Design containers to be stateless and easily replaceable.
-    Decouple Applications: Run only one primary process per container to maintain clear separation of concerns.
-    Implement Health Checks: Include HEALTHCHECK instructions in your Dockerfile to allow Docker to determine if a container is running correctly.
-    Use Custom Networks: Create custom Docker networks for better isolation and control over inter-container communication.
-    Integrate with CI/CD: Automate image building, testing, and deployment within your CI/CD pipeline.
-    Monitor and Log: Implement robust logging and monitoring solutions to track container performance and identify issues.
+#### MONGODB
+
+    Ikkada mongdb lo load chelasina data catalogue msvc lo master-data.js ane filename tho undi basic ga data loading task ni DB team vallu handle chestharu and they dont give any root user to application team or DevOps team
+
+    But, here we are only loading the data directly in mongodb ratherthan running from catalogue msvc, that is the reason why we are keeping master-data.js file in mongodb folder and it loads befor the container starts as we have copied it in the path /docker-entrypoint-initdb.d in Docker
+
+    line no 3 in dockerfile indicates that all the .js files in mongodb folder are being copied to /docker-entrypoint-initdb.d and Docker executes them first as the init script before starting the container.
+
+    actually, its master-data.js which is part of catalogue msvc, but we are running it directly via mongodb as it will be present in mongodb only when we are using application.
+
+    #master-data.js has catagories related data
+
+    ## Commands to execute after finishing the dockerfile creation
+
+        docker build -t mongodb:v1 .
+
+        docker run -d --name mongodb mongodb:v1
+
+        As we are not exposing the mongodb, we are not using -p command
+
+        docker exec -t mongodb bash >>> to loginto the container in execute mode and see the catagories related data
+
+        exit
+
+#### CATALOGUE
+
+    Understanding the docker image step by step
+
+    ikkada line no-27 lo unna mongodb:27017 is the host. manam separate ga route53 ni em use cheyatledu. name of the container is the name of the host i.e., mongdb
+    we already know that mongodb is available on 27017 port no
+    RUN npm install installs dependencies
+    COPY command makes sure that we are copying all the code into the /opt/server folder 
+    And finally, line no-8, manam execute cheyalsina code server.js
+
+
+    Download the https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip  into our laptop and extract it. And copy the make package.json and server.json so that they are with our dockerfile
+
+    Below are the steps in understanding the CMD instruction step-by-step
+
+    
