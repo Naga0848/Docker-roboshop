@@ -49,7 +49,7 @@
 
 ####  Understanding the docker image step by step
 
-    ikkada line no-27 lo unna mongodb:27017 is the host. manam separate ga route53 ni em use cheyatledu. name of the container is the name of the host i.e., mongdb
+    ikkada line no-27 lo unna mongodb:27017 is the host. manam separate ga route53 ni em use cheyatledu. name of the container is the name of the host i.e., mongodb
     we already know that mongodb is available on 27017 port no
     RUN npm install installs dependencies
     COPY command makes sure that we are copying all the code into the /opt/server folder 
