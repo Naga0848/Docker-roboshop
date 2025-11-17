@@ -2,17 +2,17 @@ FROM node:20-alpine3.21 AS builder
 WORKDIR /opt/server
 COPY package.json .
 COPY *.js .
-RUN apk update && apk add --no-cache bash curl bind-tools nodejs npm
 RUN npm install
 
 FROM node:20-alpine3.21
 RUN addgroup -S roboshop && adduser -S roboshop -G roboshop
+RUN apk update && apk add --no-cache bash curl bind-tools nodejs npm
 ENV MONGO="true" \
     MONGO_URL="mongodb://mongodb:27017/catalogue"
 WORKDIR /opt/server
 USER roboshop
 COPY --from=builder /opt/server /opt/server
-CMD ["bash", "-c","node server.js"]
+CMD ["bash", "-c","node","server.js"]
 
 
 
