@@ -162,3 +162,5 @@
     exit
 
     this shows app:OK and mongo:true >>>> which confirms that user is running fine
+
+![alt text](images/user-connection-test.png)
