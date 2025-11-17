@@ -53,7 +53,7 @@
     we already know that mongodb is available on 27017 port no
     RUN npm install installs dependencies
     COPY command makes sure that we are copying all the code into the /opt/server folder 
-    And finally, line no-8, manam execute cheyalsina code server.js
+    And finally, line no-29, manam execute cheyalsina code server.js
 
     Download the https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip  into our laptop and extract it. And copy the make package.json and server.json so that they are with our dockerfile
 
