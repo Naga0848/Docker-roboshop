@@ -142,3 +142,23 @@
     
     docker run -d --name redis --network roboshop redis:7 
         indicates that redis is running on roboshop network with the name redis
+
+### User
+
+#### As this is the nodejs application(microservice) the explanation is same like catalogue, so we are just mentioning the commands rather than explaining   the complete dockefile
+
+#### Commands to execute the docker image
+
+    docker build -t user:v1 .
+
+    docker run -d --name user --network roboshop user:v1
+
+    docker ps
+
+    docker exec -it user:v1 bash
+
+    curl localhost:8080/health
+
+    exit
+
+    this shows app:OK and mongo:true >>>> which confirms that user is running fine
