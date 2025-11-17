@@ -21,7 +21,7 @@
 
 ## Understanding Roboshop Application Service specific Dockerfiles 
 
-#### MONGODB
+### MONGODB
 
     Ikkada mongdb lo load chelasina data catalogue msvc lo master-data.js ane filename tho undi basic ga data loading task ni DB team vallu handle chestharu and they dont give any root user to application team or DevOps team
 
@@ -33,7 +33,7 @@
 
     #master-data.js has catagories related data
 
-    ## Commands to execute after finishing the dockerfile creation
+###  Commands to execute after finishing the dockerfile creation
 
         docker build -t mongodb:v1 .
 
