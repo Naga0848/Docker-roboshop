@@ -110,6 +110,8 @@
 
     docker default bridge network can't communicate between containers, docker always suggest to create custom brige network
 
+ ![alt text](images/network.png)   >> This diagram helps in understanding the network in Docker
+
 ####   Commands to create a new network and disconnect and connect to the new network
 
     docker network create roboshop  >>>  command to create a new network
