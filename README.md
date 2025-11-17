@@ -57,6 +57,8 @@
     COPY command makes sure that we are copying all the code into the /opt/server folder 
     And finally, line no-29, manam execute cheyalsina code server.js
 
+    In our Dockerfile we are suing the combination of CMD and ENTRYPOINT and installing the necessary packages for bash and the main application
+
     Download the https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip  into our laptop and extract it. And copy the make package.json and server.json so that they are with our dockerfile
 
 ####    Below are the steps in understanding the CMD instruction step-by-step
@@ -123,7 +125,6 @@
     docker network disconnect bridge mongodb
 
     docker network ls >>> shows our networks
-
 
     docker network connect roboshop catalogue
 
