@@ -14,6 +14,8 @@ COPY --from=builder /opt/server/target/shipping-*.jar /opt/server/shipping.jar
 USER roboshop
 CMD ["java","-jar","shipping.jar"]
 
+
+
 # FROM maven
 # WORKDIR /opt/server
 # COPY pom.xml .
