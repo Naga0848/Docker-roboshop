@@ -169,7 +169,7 @@
 
 #### As this is the nodejs application(microservice) the explanation is same like catalogue, so we are just mentioning the commands rather than explaining the complete dockefile
 
-#### Commands to create the cart container
+  #### Commands to create the cart container
 
     docker build -t cart:v1 .
 
@@ -194,7 +194,7 @@
 
     But, here we are only loading the data directly in mysql ratherthan running from catalogue msvc, that is the reason why we are keeping all the .sql files in mysql/db folder and it loads before the container starts as we have copied it in the path /docker-entrypoint-initdb.d in Docker
 
-#### Commands to create the mysql docker container
+  #### Commands to create the mysql docker container
 
     docker build -t mysql:v1 .
 
@@ -216,7 +216,7 @@
 
      And lline no-6 is for moving that .jar file with version no into /opt/server folder by renaming it to shipping.jar
 
-#### Commands to create the shipping docker container
+  #### Commands to create the shipping docker container
 
      docker build -t shipping:v1 .
 
@@ -227,7 +227,7 @@
      exit
 ![alt text](images/shipping-connection-test.png)
 
-#### Understanding the CMD instruction step-by-step
+  #### Understanding the CMD instruction step-by-step
 
     CMD ["java","-jar","shipping.jar"]
 
