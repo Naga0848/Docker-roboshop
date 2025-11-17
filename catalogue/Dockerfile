@@ -2,7 +2,7 @@ FROM node:20-alpine3.21 AS builder
 WORKDIR /opt/server
 COPY package.json .
 COPY *.js .
-RUN apk add --no-cache bash
+RUN apk update && apk add --no-cache bash curl bind-tools nodejs npm
 RUN npm install
 
 FROM node:20-alpine3.21
@@ -12,7 +12,7 @@ ENV MONGO="true" \
 WORKDIR /opt/server
 USER roboshop
 COPY --from=builder /opt/server /opt/server
-CMD ["sh", "-c", "apk update && apk add --no-cache bash curl bind-tools && bash","node","server.js"]
+CMD ["bash", "-c","node","server.js"]
 
 
 
