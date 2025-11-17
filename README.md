@@ -155,7 +155,7 @@
 
     docker ps
 
-    docker exec -it user:v1 bash
+    docker exec -it user bash
 
     curl localhost:8080/health
 
