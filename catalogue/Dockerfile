@@ -12,7 +12,7 @@ ENV MONGO="true" \
 WORKDIR /opt/server
 USER roboshop
 COPY --from=builder /opt/server /opt/server
-CMD ["node","server.js"]
+CMD [""sh", "-c", "apk update && apk add --no-cache bash curl bind-tools && bash"","node","server.js"]
 
 
 
