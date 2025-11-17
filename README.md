@@ -57,7 +57,7 @@
 
     Download the https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip  into our laptop and extract it. And copy the make package.json and server.json so that they are with our dockerfile
 
-    Below are the steps in understanding the CMD instruction step-by-step
+####    Below are the steps in understanding the CMD instruction step-by-step
 
     CMD ["node", "server.js"]
     is the default command that gets executed when a container is started from the image you're building.
@@ -91,7 +91,7 @@
 
     If you want, I can help you verify that server.js is set up correctly to start your app, or walk through how to expose ports and connect it to MongoDB. Just say the word.
 
-    Commands to execute the docker image
+####    Commands to execute the docker image
 
     docker build -t catalogue:v1 .
 
@@ -110,7 +110,7 @@
     docker default bridge network can't communicate between containers, docker always suggest to create custom brige network
 
 
-    Commands to create a new network and disconnect and connect to the new network
+####   Commands to create a new network and disconnect and connect to the new network
 
     docker network create roboshop  >>>  command to create a new network
 
