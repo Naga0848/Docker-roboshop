@@ -147,7 +147,7 @@
 
 #### As this is the nodejs application(microservice) the explanation is same like catalogue, so we are just mentioning the commands rather than explaining   the complete dockefile
 
-#### Commands to execute the docker image
+#### Commands to create the user container
 
     docker build -t user:v1 .
 
@@ -169,7 +169,7 @@
 
 #### As this is the nodejs application(microservice) the explanation is same like catalogue, so we are just mentioning the commands rather than explaining the complete dockefile
 
-#### Commands to execute the docker image
+#### Commands to create the cart container
 
     docker build -t cart:v1 .
 
@@ -182,6 +182,27 @@
     curl localhost:8080/health
 
     this shows app:OK and mongo:true   >>>> which confirms that cart is running fine
+
+    exit
+
+![alt text](images/cart-connection-test.png)
+
+
+#### MYSQL
+
+    Ikkada mysql lo load chelasina data shipping msvc lo .sql file names tho unnai basic ga data loading task ni DB team vallu handle chestharu and they dont give any root user to application team or DevOps team
+
+    But, here we are only loading the data directly in mysql ratherthan running from catalogue msvc, that is the reason why we are keeping all the .sql files in mysql/db folder and it loads before the container starts as we have copied it in the path /docker-entrypoint-initdb.d in Docker
+
+#### Commands to create the mysql docker container
+
+    docker build -t mysql:v1 .
+
+    docker run -d --name mysql --network roboshop mysql:v1
+
+    docker ps
+
+    docker exec -it bash
 
     exit
 
