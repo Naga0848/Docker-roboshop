@@ -15,8 +15,6 @@
 
  login to the docker and run docker compose command
 
- ==========================================
-
 # /var/lib/docker ----> Docker Home directory and all the images that we built are stored here and we need to increase the size of this location when we are creating docker using terrform
 
 ## Understanding Roboshop Application Service specific Dockerfiles 
