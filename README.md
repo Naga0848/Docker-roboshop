@@ -33,7 +33,7 @@
 
     #master-data.js has catagories related data
 
-###  Commands to execute after finishing the dockerfile creation
+###  Commands to execute for the creation of MongoDB container
 
         docker build -t mongodb:v1 .
 
@@ -91,7 +91,7 @@
 
     If you want, I can help you verify that server.js is set up correctly to start your app, or walk through how to expose ports and connect it to MongoDB. Just say the word.
 
-####    Commands to execute the docker image
+####    Commands to execute to create the Catalogue Container
 
     docker build -t catalogue:v1 .
 
