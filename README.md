@@ -247,7 +247,9 @@
 
 
 
-# Volumes
+# Volumes and Docker Compose 
+
+    Docker compose is a command line to manage multi container applications, we can define all the containers as services, create dependencies between them, start them at once, stop them at once..
 
     un-named/un-managed volumes
 
