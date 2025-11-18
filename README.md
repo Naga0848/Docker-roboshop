@@ -277,11 +277,11 @@
 
     Dcoker Compose Commands
 
-        docker-compose up -d  >> runs them in detached mode
+        docker compose up -d  >> runs them in detached mode
 
-        docker-compose down  >> To Delete Containers (and networks)
+        docker compose down  >> To Delete Containers (and networks)
 
-        docker-compose down -v  >> Optional Cleanup (if you want to remove volumes too)
+        docker compose down -v  >> Optional Cleanup (if you want to remove volumes too)
 
 
     un-named/un-managed volumes
