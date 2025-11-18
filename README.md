@@ -252,5 +252,14 @@
     un-named/un-managed volumes
 
     if we create dir and manage it then those un-named/un-managed volumes
-    
+
     if docker creates volumes and manages them then they are named/maanged volumes
+
+    stateless vs stateful
+    =====================
+    WEB APP DB   are the three types of tires we have
+
+    where data is important is called stateful applications...
+    app code is stateless..
+
+    volumes should be created to stateful apps. databases store the actual data is host directories, while rendering for user it will shows tables or collections
