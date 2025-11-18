@@ -1,6 +1,6 @@
 # Docker-roboshop
 
-#### Command to build and push all the images in to Dockerhub
+### Command to build and push all the images in to Dockerhub
     
     for i in $(ls -d */); do cd $i; name=$(basename "$i"); docker build -t nagashankar1992332/$name:v1 . ; docker push nagashankar1992332/$name cd .. ; done
 
