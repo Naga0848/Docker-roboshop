@@ -6,6 +6,8 @@
 
     docker rmi -f $(docker images -q)   >>> command to remove all the docker images at a time
 
+    docker rm -f $(docker ps -aq)  >>> command to remove all the docker containers at a time
+
 # All these images are optimized and these images have less size
 
 # As we are not filling any data into the Redis we can directly run the redis container on our Docker host
@@ -272,6 +274,15 @@
 # Volumes and Docker Compose 
 
     Docker compose is a command line to manage multi container applications, we can define all the containers as services, create dependencies between them, start them at once, stop them at once..
+
+    Dcoker Compose Commands
+
+        docker-compose up -d  >> runs them in detached mode
+
+        docker-compose down  >> To Delete Containers (and networks)
+
+        docker-compose down -v  >> Optional Cleanup (if you want to remove volumes too)
+
 
     un-named/un-managed volumes
 
