@@ -4,6 +4,8 @@
     
     for i in $(ls -d */); do cd $i; name=$(basename "$i"); docker build -t nagashankar1992332/$name:v1 . ; docker push nagashankar1992332/$name cd .. ; done
 
+    docker rmi -f $(docker images -q)   >>> command to remove all the docker images at a time
+
 # All these images are optimized and these images have less size
 
 # As we are not filling any data into the Redis we can directly run the redis container on our Docker host
