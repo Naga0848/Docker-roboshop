@@ -240,7 +240,7 @@
 
      And lline no-6 is for moving that .jar file with version no into /opt/server folder by renaming it to shipping.jar
 
-  #### Commands to create the shipping docker container
+ #### Commands to create the shipping docker container
 
      docker build -t shipping:v1 .
 
@@ -255,7 +255,7 @@
      exit
 ![alt text](images/shipping-connection-test.png)
 
-  #### Understanding the CMD instruction step-by-step
+   #### Understanding the CMD instruction step-by-step
 
     CMD ["java","-jar","shipping.jar"]
 
