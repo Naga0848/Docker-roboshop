@@ -218,6 +218,10 @@
 
     docker run -d --name mysql --network roboshop mysql:v1
 
+    docker tag mysql:v1 nagashankar1992332/mysql:v1
+
+    docker push nagashankar1992332/mysql:v1
+
     docker ps
 
     docker exec -it mysql bash
@@ -239,6 +243,10 @@
      docker build -t shipping:v1 .
 
      docker run -d --name shipping --network roboshop shipping:v1
+
+     docker tag shipping:v1 nagashankar1992332/shipping:v1
+
+     docker push nagashankar1992332/shipping:v1
 
      docker exec -it shipping bash
 
