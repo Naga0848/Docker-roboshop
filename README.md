@@ -247,4 +247,10 @@
 
 
 
-for i in $(ls -d */); do cd $i; name=$(basename "$i"); docker build -t nagashankar1992332/$name:v1 . ; docker push nagashankar1992332/$name cd .. ; done
+# Volumes
+
+    un-named/un-managed volumes
+
+    if we create dir and manage it then those un-named/un-managed volumes
+    
+    if docker creates volumes and manages them then they are named/maanged volumes
