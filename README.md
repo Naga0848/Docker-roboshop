@@ -263,3 +263,16 @@
     app code is stateless..
 
     volumes should be created to stateful apps. databases store the actual data is host directories, while rendering for user it will shows tables or collections
+
+    So, in our case, we create volumes for our Redis, MySql, MongoDB and Rabbitmq. We care creating volumes in the Docker compose. And they have specific directory to store the data.
+
+        MongoDB stores data at the location ----  mongodb:/data/db
+
+        Redis stores data at the location ---- redis:/data
+
+        Rabbitmq stores data at the location ---- /var/lib/rabbitmq
+
+        MySql stores data at the location ---- mysql:/var/lib/mysql
+
+
+
