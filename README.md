@@ -276,7 +276,7 @@
 
     Dcoker Compose Commands
 
-        docker compose up -d  >> runs them in detached mode
+        docker compose up -d  >> runs all the containers in detached mode
 
         docker compose down  >> To Delete Containers (and networks)
 
