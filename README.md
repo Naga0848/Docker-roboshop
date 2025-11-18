@@ -8,22 +8,21 @@
 
     docker rm -f $(docker ps -aq)  >>> command to remove all the docker containers at a time
 
-# All these images are optimized and these images have less size
+#### All these images are optimized and these images have less size
 
-# As we are not filling any data into the Redis we can directly run the redis container on our Docker host
+#### As we are not filling any data into the Redis we can directly run the redis container on our Docker host
 
-# Command >>>> docker run -d --name redis --network roboshop redis:7
-    indicates that redis is running on roboshop network with the name redis
+#### Command >>>> docker run -d --name redis --network roboshop redis:7
+                  indicates that redis is running on roboshop network with the name redis
 
-# As we are creating the Rabbitmq directly via docker compose and we are mentioning the env variables as well in the docker compose file
-
+#### As we are creating the Rabbitmq directly via docker compose and we are mentioning the env variables as well in the docker compose file
 
  # My Docker Credentials
  username - nagashankar1992332
 
  login to the docker and run docker compose command
 
-# /var/lib/docker ----> Docker Home directory and all the images that we built are stored here and we need to increase the size of this location when we are creating docker using terrform
+#### /var/lib/docker ----> Docker Home directory and all the images that we built are stored here and we need to increase the size of this location when we are creating docker using terrform
 
 ## Understanding Roboshop Application Service specific Dockerfiles 
 
