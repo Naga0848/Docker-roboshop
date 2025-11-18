@@ -100,6 +100,10 @@
 
     docker build -t catalogue:v1 .
 
+    docker tag catalogue:v1 nagashankar1992332/catalogue:v1
+
+    docker push nagashankar1992332/catalogue:v1
+
     docker run -d --name catalogue catalogue:v1
 
     docker ps
@@ -159,6 +163,10 @@
 
     docker run -d --name user --network roboshop user:v1
 
+    docker tag user:v1 nagashankar1992332/user:v1
+
+    docker push nagashankar1992332/user:v1
+
     docker ps
 
     docker exec -it user bash
@@ -180,6 +188,10 @@
     docker build -t cart:v1 .
 
     docker run -d --name cart --network roboshop cart:v1
+
+    docker tag cart:v1 nagashankar1992332/cart:v1
+
+    docker push nagashankar1992332/cart:v1
 
     docker ps 
 
